@@ -19,9 +19,6 @@ public class DocumentService {
         if (swaggerV2Documentation != null) {
             swaggerV2Documentation.setHost(apiHost);
         }
-        if ("https".equals(scheme)) {
-            swaggerV2Documentation.setSchemes(Collections.singletonList("https"));
-        }
         return swaggerV2Documentation;
     }
 }

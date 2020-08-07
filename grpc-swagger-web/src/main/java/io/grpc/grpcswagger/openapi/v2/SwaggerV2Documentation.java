@@ -19,9 +19,7 @@ public class SwaggerV2Documentation {
     private String basePath = "/";
     private String host = "localhost:8088";
     // 支持http, https选择
-//    private List<String> schemes = new ArrayList<String>(2){{add("http");add("https");}};
-    // 默认只支持http
-    private List<String> schemes = Collections.singletonList("http");
+    private List<String> schemes = new ArrayList<String>(2){{add("http");add("https");}};
     private Map<String, DefinitionType> definitions;
     private Map<String, PathItem> paths;
 }
