@@ -70,7 +70,8 @@ public class GrpcController {
     @RequestMapping("/v2/api-docs")
     public Object groupResponse(@RequestParam("service") String service, HttpServletRequest httpServletRequest) {
         String apiHost = httpServletRequest.getHeader("Host");
-        SwaggerV2Documentation documentation = documentService.getDocumentation(service, apiHost);
+        String scheme = httpServletRequest.getScheme();
+        SwaggerV2Documentation documentation = documentService.getDocumentation(service, apiHost, scheme);
         return new SwaggerV2DocumentView(service, documentation);
     }
 
